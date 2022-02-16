@@ -760,9 +760,21 @@ body {
   padding: 0; }
 
 .site-header {
-  background-color: lightgrey;
   border-top: solid 1px transparent;
-  border-bottom: solid 1px transparent; }
+  border-bottom: solid 1px transparent;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
+
+@media only screen and (min-width: 960px) {
+  .menu-toggle {
+    display: none; } }
+
+.main-navigation .nav-menu {
+  display: none; }
+  @media only screen and (min-width: 960px) {
+    .main-navigation .nav-menu {
+      display: block; } }
+  .main-navigation .nav-menu.toggled-on {
+    display: block; }
 
 html {
   font-size: 16px; }
@@ -782,4 +794,15 @@ h1 {
   @media only screen and (min-width: 960px) {
     h1 {
       color: #ffcc00; } }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important; }
 

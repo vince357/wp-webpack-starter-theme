@@ -1,5 +1,23 @@
 .site-header {
-  background-color: lightgrey;
   border-top: solid 1px transparent;
   border-bottom: solid 1px transparent;
+  box-shadow: 0 0 $gutter rgba(0,0,0,.2);
+}
+
+// The main menu. Hidden by default on small screens.
+.menu-toggle {
+  @media #{$breakpoint-md-up} {
+    display: none;
+  }
+}
+.main-navigation {
+  .nav-menu {
+    display: none;
+    @media #{$breakpoint-md-up} {
+      display: block;
+    }
+    &.toggled-on {
+      display: block;
+    }
+  }
 }
