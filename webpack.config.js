@@ -6,7 +6,7 @@ var path = require('path');
 const jsPath= './js';
 const cssPath = './css';
 const outputPath = 'dist';
-const localDomain = 'https://test-wp-webpack.dev'; // YOUR LOCAL DOMAIN NAME
+const localDomain = 'https://wordpress-webpack-test.dev'; // YOUR LOCAL DOMAIN NAME
 const entryPoints = {
   // 'app' is the output name, people commonly use 'bundle'
   // you can have more than 1 entry point

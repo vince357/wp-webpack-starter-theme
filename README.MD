@@ -1,8 +1,8 @@
 ## What is this?
 
-This Wordpress child theme is based on any theme you like.
+This Wordpress theme works with webpack.
 
-It uses WebPack as it was explained in this (also excellent) article by Henner Setyono https://wptips.dev/webpack-in-wordpress/
+It uses WebPack as it was explained in this excellent article by Henner Setyono https://wptips.dev/webpack-in-wordpress/
 Thanks to him!
 
 ## Installation
@@ -15,25 +15,26 @@ Your site root
 ├── …
 ├── wp-content
 │   └── themes
-│       ├── your-parent-theme
-│       └── wordpress-child-theme-with-webpack
+│       ├── some-theme
+│       └── wp-webpack-starter-theme
 └── …
 ```
 
-3. Go to the child theme directory and launch
-$yarn install
+2. Go to the theme directory and launch
+`$yarn install`
 
-4. `$yarn run dev`
-or `$yarn run prod`
+3. Edt line 9 of ./webpack.config.js and set your own localhost
 
-The `dev` option will use Browsersync and HMR while webpack is watching :)
+4. `$yarn dev` or `$yarn prod`
+
+The `dev` option will use Browsersync and HMR while webpack is watching SCSS and PHP files :)
 Your site will be running at 
 https://localhost:3000
 
+The `prod` option will minify CSS and JS files
+
 ## Important
 
-1. You have to edit `./style.css` line 4 replacing the string `your-parent-theme-directory-name` by the name of your parent theme directory name (caution, directory name may be different from the theme name itsself, it is actually the folder name you have to enter there).
+1. Don't forget to edit `./webpack.config.js` according to your own parameters. You can also add your own entry-points of course.
 
-2. Don't forget to edit `wordpress-child-theme-with-webpack/webpack.config.js` according to your own parameters. You can also add your own entry-points of course.
-
-3. Also, be aware that in my configuration, the rendered CSS and JS files are located in the `wordpress-child-theme-with-webpack/dist` folder. You can change these settings if you wish at lines 5 and below in the `webpack.config.js` file.
+2. Also, be aware that in my configuration, the rendered CSS and JS files are located in the `./dist` folder. You can change these settings if you wish at lines 5 and below in the `webpack.config.js` file.

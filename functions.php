@@ -1,17 +1,19 @@
 <?php
+
 /**
-** activation theme
-**/
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
-function theme_enqueue_styles() {
- wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+ * Webpack Theme setup.
+ *
+ * Sets up theme defaults and registers the various WordPress features that
+ * this theme supports.
+ *
+ * @uses load_theme_textdomain() For translation/localization support.
+ * @uses register_nav_menu() To add support for navigation menus.
+ *
+ * @since Wordpress Webpack Starter Theme 0.1
+ */
 
-}
-
-add_action( 'wp_enqueue_scripts', 'my_public_assets', 99 );
-
-function my_public_assets() {
-  $dir = get_stylesheet_directory_uri() . '/dist';
-  $css_ver = date("ymd-Gis", filemtime( $dir . '/app.css' ));
-  wp_enqueue_style( 'my-app', $dir . '/app.css', false,   $css_ver );
-}
+require_once('inc/scripts.php');
+require_once('inc/register-menus.php');
+require_once('inc/disable-emojis.php');
+require_once('inc/remove-guenberg-global-styles.php');
+require_once('inc/remove-generator-name.php');

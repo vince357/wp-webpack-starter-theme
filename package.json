@@ -1,6 +1,6 @@
 {
-  "name": "bootspress-child",
-  "description": "This WP theme is a child theme of Bootspress excellent WP theme from https://bootspress.com/ wich we have just added some webpack flavor (with HMR and SASS features at least)",
+  "name": "wordpress-webpack-starter-theme",
+  "description": "This WP theme has some webpack flavor in it (with HMR and SASS features at least)",
   "private": true,
   "dependencies": {
     "@babel/polyfill": "^7.11.5"
