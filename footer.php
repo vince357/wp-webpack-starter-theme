@@ -4,6 +4,7 @@
  * Contains footer content and the closing of the #main and #page div elements.
  */
 ?>
+
 	</div><!-- #main .wrapper -->
 	<footer id="colophon" role="contentinfo">
 		<div class="site-info">

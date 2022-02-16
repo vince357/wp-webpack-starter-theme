@@ -17,23 +17,23 @@
 <?php wp_body_open(); ?>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header">
-		<hgroup>
+		<div class="ui-width">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle"><?php _e( 'Menu', 'webpack' ); ?></button>
-			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'webpack' ); ?>"><?php _e( 'Skip to content', 'webpack' ); ?></a>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'primary',
-					'menu_class'     => 'nav-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+			
+			<nav id="site-navigation" class="main-navigation">
+				<button class="menu-toggle"><?php _e( 'Menu', 'webpack' ); ?></button>
+				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'webpack' ); ?>"><?php _e( 'Skip to content', 'webpack' ); ?></a>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'primary',
+						'menu_class'     => 'nav-menu',
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
+		</div><!-- .ui-width -->
 	</header><!-- #masthead -->
 
 	<div id="main" class="wrapper">

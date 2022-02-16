@@ -1,3 +1,20 @@
-.entry-title a {
-  color: red;
+html {
+  font-size: 16px;
+}
+.ui-width {
+  max-width: $ui-width;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  margin-left: auto;
+  margin-right: auto;
+  &.no-gutters {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+h1 {
+  color: blue;
+  @media #{$breakpoint-md-up} {
+    color: $primary;
+  }
 }
