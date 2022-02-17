@@ -4,7 +4,11 @@
   "private": true,
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
-    "@drewbot/sass-flexbox-grid": "^2.0.7"
+    "@drewbot/sass-flexbox-grid": "^2.0.7",
+    "@fontsource/open-sans": "^4.5.5",
+    "add": "^2.0.6",
+    "remove": "^0.1.5",
+    "yarn": "^1.22.17"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",

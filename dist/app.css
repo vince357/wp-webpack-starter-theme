@@ -759,25 +759,196 @@ body {
   margin: 0;
   padding: 0; }
 
+.btn {
+  display: inline-block;
+  line-height: 1.5;
+  color: #222;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .25em .5em;
+  font-size: 1em;
+  border-radius: .25em;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out; }
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #3366cc;
+  border-color: #3366cc; }
+  .btn-primary:hover, .btn-primary:active {
+    background-color: rgba(51, 102, 204, 0.8); }
+
+.btn-secondary {
+  color: #ffffff;
+  background-color: #6c757d;
+  border-color: #6c757d; }
+  .btn-secondary:hover, .btn-secondary:active {
+    background-color: rgba(108, 117, 125, 0.8); }
+
+.btn-success {
+  color: #ffffff;
+  background-color: #198754;
+  border-color: #198754; }
+  .btn-success:hover, .btn-success:active {
+    background-color: rgba(25, 135, 84, 0.8); }
+
+.btn-info {
+  color: #333333;
+  background-color: #0dcaf0;
+  border-color: #0dcaf0; }
+  .btn-info:hover, .btn-info:active {
+    background-color: rgba(13, 202, 240, 0.8); }
+
+.btn-warning {
+  color: #333333;
+  background-color: #fd7e14;
+  border-color: #fd7e14; }
+  .btn-warning:hover, .btn-warning:active {
+    background-color: rgba(253, 126, 20, 0.8); }
+
+.btn-danger {
+  color: #ffffff;
+  background-color: #dc3545;
+  border-color: #dc3545; }
+  .btn-danger:hover, .btn-danger:active {
+    background-color: rgba(220, 53, 69, 0.8); }
+
+.form-control {
+  display: inline-block;
+  padding: .25em .5em;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #f0f0f0;
+  appearance: none;
+  border-radius: .25em; }
+
 .site-header {
   border-top: solid 1px transparent;
   border-bottom: solid 1px transparent;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
 
+h1.site-title,
+p.site-title {
+  margin: 0;
+  padding: 0;
+  font-size: .5rem;
+  line-height: 0; }
+  h1.site-title a,
+  p.site-title a {
+    display: inline-block;
+    line-height: 0; }
+
+.main-header--logo-link {
+  display: block;
+  margin: 0.5rem 1rem 0.5rem 0; }
+  .main-header--logo-link img,
+  .main-header--logo-link svg {
+    width: auto;
+    height: 2rem; }
+    @media only screen and (min-width: 960px) {
+      .main-header--logo-link img,
+      .main-header--logo-link svg {
+        height: 3rem; } }
+
 @media only screen and (min-width: 960px) {
   .menu-toggle {
     display: none; } }
 
-.main-navigation .nav-menu {
-  display: none; }
-  @media only screen and (min-width: 960px) {
-    .main-navigation .nav-menu {
-      display: block; } }
-  .main-navigation .nav-menu.toggled-on {
-    display: block; }
+.main-navigation {
+  display: flex;
+  justify-content: flex-end; }
+  .main-navigation .menu-toggle {
+    align-self: center;
+    order: 2;
+    cursor: pointer;
+    border: solid 1px #f0f0f0;
+    border-radius: 0.25rem;
+    background: transparent;
+    display: inline-flex;
+    line-height: 0;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center; }
+    .main-navigation .menu-toggle.toggled-on {
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2); }
+  .main-navigation #main-nav-and-search-form {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: calc(2rem + 1rem);
+    width: 100%;
+    min-height: calc(100vh - 2rem - 1rem);
+    background-color: #ffffff;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
+    .admin-bar .main-navigation #main-nav-and-search-form {
+      top: calc(2rem + 1rem + 32px); }
+    @media only screen and (min-width: 960px) {
+      .main-navigation #main-nav-and-search-form {
+        position: revert;
+        left: revert;
+        top: revert; } }
+    .admin-bar .main-navigation #main-nav-and-search-form {
+      min-height: calc(100vh - 2rem - 1rem - 32px); }
+    @media only screen and (min-width: 960px) {
+      .main-navigation #main-nav-and-search-form {
+        display: block; } }
+    .main-navigation #main-nav-and-search-form.toggled-on {
+      display: block; }
+  .main-navigation .primary-menu {
+    list-style-type: none;
+    background: #ffffff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-weight: normal; }
+    .main-navigation .primary-menu ul {
+      list-style-type: none;
+      margin: 0 0 0 1em;
+      padding: 0; }
+    .main-navigation .primary-menu li {
+      display: block;
+      margin: 0;
+      padding: 0; }
+      .main-navigation .primary-menu li.current-menu-ancestor > a,
+      .main-navigation .primary-menu li.current-menu-item > a {
+        font-weight: bold; }
+    .main-navigation .primary-menu a {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: #3366cc;
+      background-color: #ffffff; }
+      .main-navigation .primary-menu a:hover {
+        background-color: #f0f0f0;
+        color: #6c757d; }
+  .main-navigation .searchform {
+    display: block;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: solid 1px #f0f0f0; }
+
+.main-nav-search-form-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: solid 1px #f0f0f0;
+  border-bottom: solid 1px #f0f0f0; }
 
 html {
   font-size: 16px; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 300;
+  color: #333333; }
 
 .ui-width {
   max-width: 75rem;
@@ -789,11 +960,9 @@ html {
     padding-left: 0;
     padding-right: 0; }
 
-h1 {
-  color: blue; }
-  @media only screen and (min-width: 960px) {
-    h1 {
-      color: #ffcc00; } }
+h1, h2, h3, h4, h5, h6 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400; }
 
 .visually-hidden {
   position: absolute !important;

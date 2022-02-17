@@ -9,7 +9,7 @@
 	}
 
 	button = nav.getElementsByTagName( 'button' )[0];
-	menu   = nav.getElementsByTagName( 'ul' )[0];
+	menu   = document.getElementById( 'main-nav-and-search-form' );
 	if ( ! button ) {
 		return;
 	}
@@ -21,8 +21,8 @@
 	}
 
 	button.onclick = function() {
-		if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-			menu.className = 'nav-menu';
+		if ( -1 === menu.className.indexOf( 'nav-and-search-form' ) ) {
+			menu.className = 'nav-and-search-form';
 		}
 
 		if ( -1 !== button.className.indexOf( 'toggled-on' ) ) {

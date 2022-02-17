@@ -1,13 +1,18 @@
 
 $ui-width: 75rem;
 
-$gutter: 1rem;
+$gutter: 1rem; // Caution. Override the flexbox grid gutter
 
-$font: sans-serif;
-$heading-font: serif;
+$logo-height-xs: 2rem;
+$logo-height-md: 3rem;
 
-$primary: #ffcc00;
-$secondary: #009900;
+// $font: "Open Sans", sans-serif;
+// $heading-font: "Open Sans", sans-serif;
+$font: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$heading-font: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+$primary: #3366cc;
+$secondary: rgb(108,117,125);
 
 $warning: #fd7e14;
 $danger: #dc3545;
@@ -15,5 +20,5 @@ $success: #198754;
 $info: #0dcaf0;
 $gray: #adb5bd;
 $light-gray: #f0f0f0;
-$black: #000000;
+$black: #333333;
 $white: #ffffff;

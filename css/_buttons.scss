@@ -1,0 +1,74 @@
+.btn {
+  display: inline-block;
+  // font-weight: 400;
+  line-height: 1.5;
+  color: #222;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .25em .5em;
+  font-size: 1em;
+  border-radius: .25em;
+  transition:
+    color .3s ease-in-out,
+    background-color .3s ease-in-out,
+    border-color .3s ease-in-out,
+    box-shadow .3s ease-in-out
+}
+.btn-primary {
+  color: $white;
+  background-color: $primary;
+  border-color: $primary;
+  &:hover,
+  &:active {
+    background-color: rgba($primary,.8);
+  }
+}
+.btn-secondary {
+  color: $white;
+  background-color: $secondary;
+  border-color: $secondary;
+  &:hover,
+  &:active {
+    background-color: rgba($secondary,.8);
+  }
+}
+.btn-success {
+  color: $white;
+  background-color: $success;
+  border-color: $success;
+  &:hover,
+  &:active {
+    background-color: rgba($success,.8);
+  }
+}
+.btn-info {
+  color: $black;
+  background-color: $info;
+  border-color: $info;
+  &:hover,
+  &:active {
+    background-color: rgba($info,.8);
+  }
+}
+.btn-warning {
+  color: $black;
+  background-color: $warning;
+  border-color: $warning;
+  &:hover,
+  &:active {
+    background-color: rgba($warning,.8);
+  }
+}
+.btn-danger {
+  color: $white;
+  background-color: $danger;
+  border-color: $danger;
+  &:hover,
+  &:active {
+    background-color: rgba($danger,.8);
+  }
+}
