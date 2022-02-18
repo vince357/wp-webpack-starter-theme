@@ -21,7 +21,7 @@
   <header id="masthead" class="site-header">
     <div class="ui-width">
       <div class="row middle-xs">
-        <div class="col-xs-4 col-no-gutter">
+        <div class="col-xs-4 col-md-2 col-no-gutter">
           <?php if(is_front_page()): ?>
             <h1 class="site-title">
           <?php else: ?>
@@ -36,7 +36,7 @@
             </p>
           <?php endif; ?>
         </div>
-        <div class="col-xs-8 col-no-gutter">
+        <div class="col-xs-8 col-md-10 col-no-gutter">
           <nav id="site-navigation" class="main-navigation">
             <a class="visually-hidden" href="#content" title="<?php esc_attr_e( 'Skip to content', 'webpack' ); ?>"><?php _e( 'Skip to content', 'webpack' ); ?></a>
             <button class="menu-toggle">

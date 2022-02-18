@@ -24,17 +24,14 @@ p.site-title {
     width: auto;
     height: $logo-height-xs;
     @media #{$breakpoint-md-up} {
-      height: $logo-height-md;
+      max-height: $logo-height-md;
+      max-width: 100%;
+      height: auto;
     }
   }
 }
 
 // The main menu. Hidden by default on small screens.
-.menu-toggle {
-  @media #{$breakpoint-md-up} {
-    display: none;
-  }
-}
 .main-navigation {
   display: flex;
   justify-content: flex-end;
@@ -51,6 +48,9 @@ p.site-title {
     padding: $gutter/2;
     align-items: center;
     justify-content: center;
+    @media #{$breakpoint-md-up} {
+      display: none;
+    }
     &.toggled-on {
       box-shadow: 0 0 $gutter/2 rgba(0,0,0,.2);
     }
@@ -64,22 +64,25 @@ p.site-title {
     min-height: calc(100vh - #{$logo-height-xs} - #{$gutter});
     background-color: $white;
     box-shadow: 0 $gutter/2 $gutter/2 rgba(0,0,0,.2);
-    .admin-bar & {
-      top: calc(#{$logo-height-xs} + #{$gutter} + 32px);
-    }
     @media #{$breakpoint-md-up} {
+      display: flex;
       position: revert;
       left: revert;
       top: revert;
+      min-height: revert;
+      box-shadow: revert;
+      align-items: center;
     }
     .admin-bar & {
-      min-height: calc(100vh - #{$logo-height-xs} - #{$gutter} - 32px);
-    }
-    @media #{$breakpoint-md-up} {
-      display: block;
+      top: calc(#{$logo-height-xs} + #{$gutter} + 46px);
+      min-height: calc(100vh - #{$logo-height-xs} - #{$gutter} - 46px);
+      @media #{$breakpoint-md-up} {
+        top: calc(#{$logo-height-xs} + #{$gutter} + 32px);
+        min-height: revert;
+      }
     }
     &.toggled-on {
-      display: block;
+      display: revert;
     }
   }
   .primary-menu {
@@ -91,6 +94,9 @@ p.site-title {
     display: flex;
     flex-direction: column;
     font-weight: normal;
+    @media #{$breakpoint-md-up} {
+      flex-direction: row;
+    }
     ul {
       list-style-type: none;
       margin: 0 0 0 1em;
@@ -117,17 +123,22 @@ p.site-title {
       }
     }
   }
-  .searchform {
-    display: block;
-    margin-left: $gutter;
-    margin-top: $gutter;
-    padding-top: $gutter;
-    border-top: solid 1px $light-gray;
-  }
+  // .searchform {
+  //   display: block;
+  //   margin-left: $gutter;
+  //   margin-top: $gutter;
+  //   padding-top: $gutter;
+  //   border-top: solid 1px $light-gray;
+  // }
 }
 .main-nav-search-form-container {
   margin-top: $gutter;
   padding: $gutter;
   border-top: solid 1px $light-gray;
-  border-bottom: solid 1px $light-gray;
+  //border-bottom: solid 1px $light-gray;
+  @media #{$breakpoint-md-up} {
+    margin-top: 0;
+    padding: 0;
+    border-top: none;
+  }
 }
